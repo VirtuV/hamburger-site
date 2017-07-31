@@ -106,7 +106,7 @@ ul.menu-top__list {
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    border: 1px solid #dddddd;
+    border: 1px solid #e45028;
 }
 .side__item {
     display: block;
@@ -177,7 +177,6 @@ ul.menu-top__list {
 }
 .secondpage__item {
     text-align: center;
-    /*height: 300px;*/
     width: 300px;
 }
 .second-page {
@@ -185,24 +184,16 @@ ul.menu-top__list {
     background-size: cover;
     
 }
-.second-page__top {
-    margin: 0;
-    padding: 0;
-    width: 100%;
+.secondpage__top {
+    margin-bottom: 80px;
+    padding-top: 30px;
+    display: block;
+
 }
 .secondpage__main {
     display: block;
-    margin-top: 80px;
+    /*margin-top: 80px;*/
 }
-
-/*.second-page__title {
-    color: #2f3234;
-    display: block;
-    width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    padding-top: 65px;
-}*/
 
 .secondpage__title {
     font-family: Lifehack-Medium;
@@ -212,6 +203,44 @@ ul.menu-top__list {
     font-family: Ubuntu-Light;
     font-size: 14px;
 }
+/*3rd page*/
+ .third-page {
+    background: #f9b43b center center no-repeat;
+    background-size: cover;
+}
+
+ /*4th page*/
+ .fouth-page {
+    background: url('../img/team.jpg') center center no-repeat;
+    background-size: cover;
+}
+.fouth-page {
+    position: relative;
+}
+.fouthpage__right {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ddd;
+}
+.fouthpage {
+    color: #f9b43b;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+.fouthpage__hidden {
+    height: 0;
+    overflow: hidden;
+}
+/*5th page*/
+ .fifth-page {
+    background: url('../img/burger4th.jpg') center center no-repeat;
+    background-size: cover;
+}
 
     /*Feedback Page*/
 
@@ -219,11 +248,11 @@ ul.menu-top__list {
     display: flex;
     flex-flow: row wrap;
     align-content: stretch;
+    height: 100%;
  
 }
 .feedback__item {
-    /*width: 275px;
-    height: 325px;*/
+    
     flex-basis: 25%;
     height: 50%;
     display: inline-block;
@@ -277,4 +306,16 @@ ul.menu-top__list {
     border: 1px solid #2f3234;
     background-color: #2f3234;
     border-radius: 3px;
+}
+
+ /*7th page*/
+ .seventh-page {
+    background: url('../img/form-background.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+ /*8th page*/
+ .eight-page {
+    background: #2f3234 center center no-repeat;
+    background-size: cover;
 }
