@@ -22,7 +22,7 @@
     justify-content: space-between;
 }
 .logo {
-    margin-top: 12px;
+    margin-top: 20%;
 }
 .menu-top__item {
     color: #fff;
@@ -123,6 +123,7 @@ ul.menu-top__list {
     width: 100%;
     padding-bottom: 15%;
     flex: 1;
+    padding-top: 5%;
 }
 .img-first {
     flex-basis: 50%;
@@ -186,12 +187,13 @@ ul.menu-top__list {
 }
 .secondpage__top {
     margin-bottom: 80px;
-    padding-top: 30px;
+    padding-top: 10%;
     display: block;
 
 }
 .secondpage__main {
     display: block;
+    padding-top: 5%;
     /*margin-top: 80px;*/
 }
 
@@ -240,6 +242,21 @@ ul.menu-top__list {
  .fifth-page {
     background: url('../img/burger4th.jpg') center center no-repeat;
     background-size: cover;
+}
+.fifthpage__item {
+    /*transform: rotate(90deg);*/
+}
+.vertical-text {
+    transform: rotate(90deg);    
+-ms-transform: rotate(90deg);
+-moz-transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+    
+/* Координаты точки трансформации */    
+transform-origin: left top 0;  
+-ms-transform-origin: left top 0;
+-moz-transform-origin: left top 0;
+-webkit-transform-origin: left top 0;
 }
 
     /*Feedback Page*/
