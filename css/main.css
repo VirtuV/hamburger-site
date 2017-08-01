@@ -1,6 +1,7 @@
 
 .container {
     width: 940px;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -35,6 +36,7 @@
 }
 .menu-top__link {
     padding-left: 15px;
+    vertical-align: middle;
 }
 .menu-top__item::before {
     content: "";
@@ -70,6 +72,7 @@ ul.menu-top__list {
     font-family: Ubuntu-Medium;
     padding: 10px 15px;
     text-transform: uppercase;
+    display: inline-block;
 }
 /* sidebar */
 .side-first-page {
@@ -170,7 +173,12 @@ ul.menu-top__list {
 
 
     /* Second Page*/
-
+.container__secondpage {
+    display: flex;
+    flex-direction: rows wrap;
+    justify-content: center;
+    align-items: center;
+}
 .secondpage__blocks {
     display: flex;
     flex-flow: row nowrap;
@@ -186,24 +194,27 @@ ul.menu-top__list {
     
 }
 .secondpage__top {
-    margin-bottom: 80px;
-    padding-top: 10%;
+    margin-bottom: 10%;
+    /*padding-top: 10%;*/
     display: block;
 
 }
 .secondpage__main {
     display: block;
-    padding-top: 5%;
+    /*padding-top: 5%;*/
     /*margin-top: 80px;*/
 }
 
 .secondpage__title {
     font-family: Lifehack-Medium;
     font-size: 24px;
+    padding-top: 10%;
+    line-height: 1;
 }
 .secondpage__text {
     font-family: Ubuntu-Light;
     font-size: 14px;
+    padding-top: 5%;
 }
 /*3rd page*/
  .third-page {
@@ -242,21 +253,39 @@ ul.menu-top__list {
  .fifth-page {
     background: url('../img/burger4th.jpg') center center no-repeat;
     background-size: cover;
+    position: relative;
+}
+.fifthpage__blocks {
+    /*content: "";
+    position: absolute;
+    top: 0;
+    right: 0;*/
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 .fifthpage__item {
-    /*transform: rotate(90deg);*/
+    height: 100%;
+    width: 5%;
 }
+.fifthpage__hidden {
+    height: 0;
+    overflow: hidden;
+}
+
 .vertical-text {
-    transform: rotate(90deg);    
--ms-transform: rotate(90deg);
--moz-transform: rotate(90deg);
--webkit-transform: rotate(90deg);
+    display: inline-block;
+    transform: rotate(-90deg);    
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
     
-/* Координаты точки трансформации */    
+ /*Координаты точки трансформации     
 transform-origin: left top 0;  
 -ms-transform-origin: left top 0;
 -moz-transform-origin: left top 0;
--webkit-transform-origin: left top 0;
+-webkit-transform-origin: left top 0;*/
 }
 
     /*Feedback Page*/
@@ -287,7 +316,7 @@ transform-origin: left top 0;
 }
 
 .feedback__content {
-    display: none;
+    /*display: none;*/
     z-index: 100;
     height: 100%;
     width: 100%;
@@ -297,11 +326,18 @@ transform-origin: left top 0;
     padding: 48px 30px 48px 20px;
     color: #fff;
     font-size: 14px;
-    background-color: rgba(0, 0, 0, .7)
+    background-color: rgba(0, 0, 0, .7);
+    transform: scale(0);
+    transition: all 0.4s;
+
+
 }
 .feedback__item:hover .feedback__content {
-    display: block;
-    /*transition: all .2s;*/
+    /*display: block;*/
+    transform: scale(1);
+    transition: all 0.8s;
+    
+
 }
 .feedback__title {
     padding-bottom: 25px;
@@ -323,6 +359,11 @@ transform-origin: left top 0;
     border: 1px solid #2f3234;
     background-color: #2f3234;
     border-radius: 3px;
+}
+.feedback__link__text:hover {
+    background-color: #1f2122;
+    border: 1px solid #1f2122;
+    transition: all .7s;
 }
 
  /*7th page*/
