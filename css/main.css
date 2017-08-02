@@ -148,7 +148,7 @@ ul.menu-top__list {
     font-family: Gagalin-Regular;
     font-weight: 300;
 }
-.first-page__title {
+.yellow__title {
     color: #f9b43b;
     /*top: 0;
     left: 50%;
@@ -240,52 +240,164 @@ ul.menu-top__list {
     background-color: rgba(0, 0, 0, 0.9);
     color: #ddd;
 }
-.fouthpage {
-    color: #f9b43b;
+.fouthpage__main {
     padding-top: 10%;
     padding-left: 10%;
+    /*width: 80%;*/
+    height: 100%;
+}
+.fouthpage {
+    color: #f9b43b;
+}
+.fouthpage__block {
+    padding-top: 10%;
+}
+.fouthpage__hidden__description {
+    padding-left: 20px;
+}
+.fouthpage__item {
+    font-family: Gagalin-Regular;
+    font-weight: 300;
+    font-size: 14px;
+    color: #ebebeb;
+}
+.fouthpage__item:hover .fouthpage__name {
+    color: #f9b43b;
+}
+.fouthpage__item:before {
+
 }
 .fouthpage__hidden {
-    height: 0;
-    overflow: hidden;
+    /*height: 0;
+    overflow: hidden;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 40px;
 }
+.fouthpage__hidden__img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #f9b43b;
+    overflow: hidden;
+   
+    
+}
+.fouthpage__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.fouthpage__hidden__title {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.fouthpage__hidden__text {
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
 /*5th page*/
  .fifth-page {
     background: url('../img/burger4th.jpg') center center no-repeat;
     background-size: cover;
-    position: relative;
 }
 .fifthpage__blocks {
-    /*content: "";
+    content: "";
     position: absolute;
     top: 0;
-    right: 0;*/
+    right: 0;
+    height: 100%;
+    /*width: 70%;*/
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-end;
 }
 .fifthpage__item {
     height: 100%;
-    width: 5%;
+}
+.fifthpage__item--meat {
+    background-color:#e45028;
+    background: url('../img/burger4th.jpg') no-repeat right;
+    background-size: cover;
+    background: rgba(0, 0, 0, .5);
+
+}
+.fifthpage__item--veg {
+    background-color: #e45028;
+    /*background: url('../img/veggie.jpg') no-repeat right;*/
+    background-position: 50%;
+    background-size: cover;
+    /*background: rgba(0, 0, 0, .5);*/
+}
+/*.fifthpage__item--veg:before {
+    background: rgba(0, 0, 0, .5);
+}*/
+.fifthpage__item--diet {
+    background-color: #e45028;
+    background: url('../img/diet.jpg') no-repeat right;
+    background-size: cover;
+    background: rgba(0, 0, 0, .5);
+}
+.fifthpage__item {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+.fifthpage__menu {
+    display: block;
+    height: 100%;
+    width: 80px;
+    position: relative;
+}
+.menu__title {
+    width: 100%;
+    height: 100%;
+}
+.fifthpage__hidden {
+    height: 100%;
+    width: 540px;
+    background: rgba(0, 0, 0, .7);
 }
 .fifthpage__hidden {
     height: 0;
+    width: 0;
     overflow: hidden;
+}
+.fifthpage__hidden__text {
+    padding: 60px 30px 0;
+    color: #fff;
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    font-size: 14px;
+
 }
 
 .vertical-text {
-    display: inline-block;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -110px;;
+    width: 300px;
+    color: #fff;
+    font-size: 40px;
+    font-family: Gagalin-Regular;
+    font-weight: 300;
     transform: rotate(-90deg);    
     -ms-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
-    
- /*Координаты точки трансформации     
-transform-origin: left top 0;  
--ms-transform-origin: left top 0;
--moz-transform-origin: left top 0;
--webkit-transform-origin: left top 0;*/
+   
 }
 
     /*Feedback Page*/
@@ -370,6 +482,59 @@ transform-origin: left top 0;
  .seventh-page {
     background: url('../img/form-background.jpg') center center no-repeat;
     background-size: cover;
+}
+.seventhpage__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.seventhpage__top {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 10%;
+}
+/*.forms__items {
+    width: 100%;
+}*/
+.forms__left .forms__right {
+    width: 50%;
+}
+.forms__elements {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    display: block;
+    
+}
+.forms__field__title {
+    color: #ddd;
+}
+.first__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+.forms__cell {
+    width: 100px;
+    margin: 5px 5px;
+}
+.forms__input__text {
+    display: inline;
+}
+.third__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+}
+label {
+    display: inline-block;
 }
 
  /*8th page*/
