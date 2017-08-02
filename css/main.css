@@ -277,7 +277,7 @@ ul.menu-top__list {
     display: flex;
     height: 0;
     overflow: hidden;
-    width: 70%;
+    /*width: 70%;*/
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -489,7 +489,7 @@ ul.menu-top__list {
     transition: all .7s;
 }
 
- /*7th page*/
+ /*7th page - Forms*/
  .seventh-page {
     background: url('../img/form-background.jpg') center center no-repeat;
     background-size: cover;
