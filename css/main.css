@@ -255,6 +255,17 @@ ul.menu-top__list {
 .fouthpage__name {
     margin-bottom: 5%;
 }
+.fouthpage__name:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 9px solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom: none;
+    margin-right: 10px;
+    display: inline-block;
+
+}
 .fouthpage__hidden__description {
     padding-left: 20px;
 }
@@ -263,26 +274,31 @@ ul.menu-top__list {
     font-weight: 300;
     font-size: 14px;
     color: #ebebeb;
+    cursor: pointer;
 }
 .fouthpage__item:hover .fouthpage__name {
     color: #f9b43b;
 }
-.fouthpage__item--show .fouthpage__name {
+.show .fouthpage__name {
     color: #f9b43b;
 }
-.fouthpage__item:before {
-
+.show .fouthpage__name:before {
+    transform: rotate(180deg);
 }
+.fouthpage__item:hover .fouthpage__name:before {
+    transform: rotate(180deg);
+    transition: .4s;
+}
+
 .fouthpage__hidden {
     display: flex;
     height: 0;
     overflow: hidden;
-    /*width: 70%;*/
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
-.fouthpage__item--show .fouthpage__hidden {
+.show .fouthpage__hidden {
     height: auto;
     overflow: hidden;
     padding-top: 15px;
@@ -326,61 +342,83 @@ ul.menu-top__list {
     top: 0;
     right: 0;
     height: 100%;
-    /*width: 70%;*/
     overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    max-width: 63%;
 }
-.fifthpage__item {
-    height: 100%;
-}
-.fifthpage__item--meat {
-    background-color:#e45028;
-    background: url('../img/burger4th.jpg') no-repeat right;
-    background-size: cover;
-    background: rgba(0, 0, 0, .5);
 
-}
-.fifthpage__item--veg {
-    background-color: #e45028;
-    /*background: url('../img/veggie.jpg') no-repeat right;*/
-    background-position: 50%;
+.fifthpage__item--meat {
+    background-image: url('../img/burger4th.jpg');
+    background-repeat:  no-repeat;
+    background-position: right;
     background-size: cover;
-    /*background: rgba(0, 0, 0, .5);*/
+    position: relative;
 }
-/*.fifthpage__item--veg:before {
-    background: rgba(0, 0, 0, .5);
+/*.fifthpage__item--meat::after {
+    content: "";
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }*/
-.fifthpage__item--diet {
-    background-color: #e45028;
-    background: url('../img/diet.jpg') no-repeat right;
+.fifthpage__item--veg {
+    background: url('../img/veggie.jpg');
+    background-repeat:  no-repeat;
+    background-position: right;
     background-size: cover;
-    background: rgba(0, 0, 0, .5);
+    position: relative;
 }
+/*.fifthpage__item--veg::after {
+    content: "";
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}*/
+
+.fifthpage__item--diet {
+    background: url('../img/diet.jpg');
+    background-repeat:  no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+/*.fifthpage__item--diet::after {
+    content: "";
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}*/
 .fifthpage__item {
     display: flex;
     flex-direction: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
 }
 .fifthpage__menu {
     display: block;
     height: 100%;
     width: 80px;
     position: relative;
+    background-color: rgba(0, 0, 0, .3);
 }
 .menu__title {
-    width: 100%;
+    /*width: 100%;*/
     height: 100%;
 }
 .fifthpage__hidden {
-    height: 100%;
-    width: 540px;
-    background: rgba(0, 0, 0, .7);
-}
-.fifthpage__hidden {
+    background: rgba(0, 0, 0, .6);
     height: 0;
     width: 0;
     overflow: hidden;
@@ -391,7 +429,13 @@ ul.menu-top__list {
     font-family: Ubuntu-Light;
     font-weight: 300;
     font-size: 14px;
-
+}
+.active .fifthpage__hidden {
+    height: 100%;
+    width: 90%;
+    overflow: hidden;
+    /*padding-top: 15px;
+    padding-bottom: 40px;*/
 }
 
 .vertical-text {
@@ -408,6 +452,7 @@ ul.menu-top__list {
     -ms-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
+    z-index: 100;
    
 }
 
@@ -472,7 +517,7 @@ ul.menu-top__list {
     font-family: Ubuntu-Light;
     font-size: 14px;
 }
-.feedback__link__text {
+.feedback__link {
     text-transform: uppercase;
     display: inline-block;
     font-family: Ubuntu-Medium;
@@ -483,7 +528,7 @@ ul.menu-top__list {
     background-color: #2f3234;
     border-radius: 3px;
 }
-.feedback__link__text:hover {
+.feedback__link:hover {
     background-color: #1f2122;
     border: 1px solid #1f2122;
     transition: all .7s;
@@ -493,6 +538,7 @@ ul.menu-top__list {
  .seventh-page {
     background: url('../img/form-background.jpg') center center no-repeat;
     background-size: cover;
+    font-size: 18px;
 }
 .seventhpage__content {
     height: 100%;
@@ -507,46 +553,27 @@ ul.menu-top__list {
     display: block;
     padding-bottom: 10%;
 }
-/*.forms__items {
+.form__container {
+    display: block;
+    height: 100%;
     width: 100%;
-}*/
-.forms__left .forms__right {
-    width: 50%;
 }
-.forms__elements {
+
+.form {
     display: flex;
-    flex-direction: row wrap;
+    flex-direction: row nowrap;
     justify-content: center;
     align-items: center;
     height: 100%;
     display: block;
-    
+    flex: 1;
 }
-.forms__field__title {
-    color: #ddd;
+.form__row {
+  display: flex;
+  margin-bottom: 20px;
 }
-.first__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-}
-.forms__cell {
-    width: 100px;
-    margin: 5px 5px;
-}
-.forms__input__text {
-    display: inline;
-}
-.third__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: flex-start;
-}
-label {
-    display: inline-block;
-}
+
+
 
  /*8th page*/
  .eight-page {
