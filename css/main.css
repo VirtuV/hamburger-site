@@ -150,9 +150,7 @@ ul.menu-top__list {
 }
 .yellow__title {
     color: #f9b43b;
-    /*top: 0;
-    left: 50%;
-    display: absolute;*/
+
 }
 
 .page__subtitle {
@@ -346,7 +344,7 @@ ul.menu-top__list {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    max-width: 63%;
+    max-width: 50%;
 }
 
 .fifthpage__item--meat {
@@ -356,15 +354,7 @@ ul.menu-top__list {
     background-size: cover;
     position: relative;
 }
-/*.fifthpage__item--meat::after {
-    content: "";
-    background-color: rgba(0, 0, 0, .3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}*/
+
 .fifthpage__item--veg {
     background: url('../img/veggie.jpg');
     background-repeat:  no-repeat;
@@ -372,15 +362,6 @@ ul.menu-top__list {
     background-size: cover;
     position: relative;
 }
-/*.fifthpage__item--veg::after {
-    content: "";
-    background-color: rgba(0, 0, 0, .3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}*/
 
 .fifthpage__item--diet {
     background: url('../img/diet.jpg');
@@ -388,15 +369,7 @@ ul.menu-top__list {
     background-position: right;
     background-size: cover;
 }
-/*.fifthpage__item--diet::after {
-    content: "";
-    background-color: rgba(0, 0, 0, .5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}*/
+
 .fifthpage__item {
     display: flex;
     flex-direction: row nowrap;
@@ -477,14 +450,11 @@ ul.menu-top__list {
     filter: grayscale(1);
     height: 100%;
     width: 100%;
-    /*display: inline-block;
-    object-fit: cover;*/
     background-size: cover;
     background-position: 50% 50%;
 }
 
 .feedback__content {
-    /*display: none;*/
     z-index: 100;
     height: 100%;
     width: 100%;
@@ -501,7 +471,6 @@ ul.menu-top__list {
 
 }
 .feedback__item:hover .feedback__content {
-    /*display: block;*/
     transform: scale(1);
     transition: all 0.8s;
     
@@ -555,24 +524,171 @@ ul.menu-top__list {
 }
 .form__container {
     display: block;
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 .form {
     display: flex;
-    flex-direction: row nowrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     height: 100%;
-    display: block;
+    width: 100%;
     flex: 1;
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    font-size: 14px;
 }
 .form__row {
   display: flex;
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 
+.form__left {
+    width: 50%;
+    flex: 1;
+    overflow: hidden;
+    color: #fff;
+}
+.form__right {
+    width: 50%;
+    flex: 1;
+    overflow: hidden;
+    margin-left: 20px;
+    color: #fff;
+}
+.form__input__text {
+  font-size: 16px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 7px;
+  border: 0;
+  height: 35px;
+}
+.first__row .form__input__text {
+    width: 220px;
+}
+.second__row .form__input__text {
+    width: 460px;
+}
+.third__row .form__input__text {
+    width: 100px;
+}
+.form__input__textarea {
+  font-size: 16px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 7px;
+  border: 0;
+  width: 100%;
+  height: 110px;
+}
+
+.form__textarea-label {
+    width: 100%;
+}
+
+.form__buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+.submit__button {
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #e45028;
+    background-color: #e45028;
+    font-size: 13px;
+    font-family: Ubuntu-Medium;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+}
+.clear__button {
+    margin-left: 20px;
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    font-family: Ubuntu-Light;
+    padding: 10px 15px;
+    text-transform: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.clear__button:hover {
+    color: #f9b43b;
+    text-decoration: underline;
+}
+
+/*radio*/
+.radio__container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.form__radio--element {
+    display: inline-block;
+    vertical-align: middle;
+    /*display: none;*/
+}
+.form__radio__text {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    vertical-align: middle;
+    color: #fff;
+}
+.form__radio {
+    margin-left: 20px;
+}
+.form__radio:first-child {
+    margin-left: 0;
+}
+
+
+.checkbox__container {
+    margin-bottom: 20px;
+}
+.form__checkbox__text {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.form__radio--fake {
+    content: "";
+    display: none;
+    /*position: absolute;
+    border-radius: 50%;
+    background: red;
+    width: 8px;
+    height: 8px;
+    top: 5px;
+    left: 5px;*/
+}
+
+
+/*.form__radio--fake:after {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+    position: relative;
+}*/
+
+
+
+
+   
 
 
  /*8th page*/
