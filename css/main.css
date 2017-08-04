@@ -161,13 +161,20 @@ ul.menu-top__list {
 }
 
 .arrow-first {
-    /*display: block;*/
-    /*margin: 0 auto;*/
     position: absolute;
     bottom: 1%;
     transition: 0.5s;
     
 }
+.arrow {
+    height: 35px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    fill: #fff;
+    cursor: pointer;
+}
+
 
 
     /* Second Page*/
@@ -193,14 +200,39 @@ ul.menu-top__list {
 }
 .secondpage__top {
     margin-bottom: 10%;
-    /*padding-top: 10%;*/
     display: block;
 
 }
 .secondpage__main {
     display: block;
-    /*padding-top: 5%;*/
-    /*margin-top: 80px;*/
+  
+}
+.secondpage__img--meat {
+    height: 100px;
+    width: 90px;
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    fill: #e25028;
+}
+.secondpage__img--hand {
+    height: 100px;
+    width: 90px;
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    fill: #f8b43a;
+}
+.secondpage__img--nature {
+    height: 100px;
+    width: 90px;
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    fill: #8ac03e;
 }
 
 .secondpage__title {
@@ -737,4 +769,16 @@ ul.menu-top__list {
 .footer__right {
     flex-basis: 50%;
     text-align: right;
+}
+.icon {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    fill: #5a5a5a;
+    cursor: pointer;
+}
+.icon:hover {
+    fill: #fff;
 }
