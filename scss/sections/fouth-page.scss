@@ -1,0 +1,147 @@
+
+ /*4th page*/
+ .fouth-page {
+    background: url('../img/team.jpg') center center no-repeat;
+    background-size: cover;
+}
+.fouth-page {
+    position: relative;
+}
+.fouthpage__right {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ddd;
+    @include tablets {
+        width: 100%;
+    }
+}
+.fouthpage__main {
+    padding-top: 10%;
+    padding-left: 10%;
+    height: 100%;
+    @include tablets {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+.fouthpage {
+    color: #f9b43b;
+    @include phones {
+        font-size: 4.125rem;
+    }
+}
+.fouthpage__block {
+    padding-top: 10%;
+
+    @include tablets {
+        padding-top: 14%;
+    }
+}
+.fouthpage__name {
+    margin-bottom: 5%;
+}
+.fouthpage__name:before {
+    content: "";
+    width: rem(0px);
+    height: rem(0px);
+    border: rem(9px) solid transparent;
+    border-top-color: #f9b43b;
+    border-bottom: none;
+    margin-right: rem(10px);
+    display: inline-block;
+
+}
+.fouthpage__hidden__description {
+    padding-left: rem(20px);
+}
+.fouthpage__item {
+    font-family: Gagalin-Regular;
+    font-weight: 300;
+    font-size: rem(14px);
+    color: #ebebeb;
+    cursor: pointer;
+    @include tablets {
+        font-size: rem(25px);
+        text-align: center;
+    }
+}
+.fouthpage__item:hover .fouthpage__name {
+    color: #f9b43b;
+}
+.show .fouthpage__name {
+    color: #f9b43b;
+}
+.show .fouthpage__name:before {
+    transform: rotate(180deg);
+}
+.fouthpage__item:hover .fouthpage__name:before {
+    transform: rotate(180deg);
+    transition: .4s;
+}
+
+.fouthpage__hidden {
+    display: flex;
+    height: 0;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+.show .fouthpage__hidden {
+    height: auto;
+    overflow: hidden;
+    padding-top: rem(15px);
+    padding-bottom: rem(40px);
+
+    @include tablets {
+        padding-top: 0;
+    }
+}
+
+.fouthpage__hidden__img {
+    height: rem(100px);
+    width: rem(100px);
+    border-radius: 50%;
+    background-color: #f9b43b;
+    overflow: hidden;
+}
+
+.fouthpage__img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.fouthpage__hidden__title {
+    font-family: Ubuntu-Bold;
+    font-weight: 700;
+    font-size: rem(14px);
+    padding-bottom: rem(20px);
+
+    @include tablets {
+        padding-top: 1rem;
+    }
+
+    
+}
+.fouthpage__hidden__text {
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    font-size: rem(14px);
+    width: 80%;
+    @include tablets {
+        margin: 0 auto;
+    }
+}
+

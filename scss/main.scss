@@ -1,0 +1,28 @@
+
+//resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+//config
+@import "config/media.scss";
+@import "config/mixins.scss";
+@import "config/variables.scss";
+
+//base
+
+@import "layout/adjustment.scss";
+@import "layout/base.scss";
+@import "layout/fonts.scss";
+
+//sections
+
+@import "sections/first-page.scss";
+@import "sections/second-page.scss";
+@import "sections/third-page.scss";
+@import "sections/fouth-page.scss";
+@import "sections/fifth-page.scss";
+@import "sections/feedback-page.scss";
+@import "sections/seventh-page.scss";
+@import "sections/eigthpage.scss";

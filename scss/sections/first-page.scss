@@ -1,0 +1,232 @@
+
+
+.first-page {
+    background: url('../img/1background.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.header {
+    // width: rem(940px);
+    width: 100%;
+    height: rem(85px);
+    // margin: 0 rem(80px);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.logo {
+    margin-top: 20%;
+}
+.menu-top__item {
+    color: #fff;
+    display: inline-block;
+    padding-top: rem(10px);
+    padding-right: rem(10px);
+    font-size: rem(13px);
+    font-family: Ubuntu;
+    text-transform: uppercase;
+}
+.menu-top__link {
+    padding-left: rem(15px);
+    vertical-align: middle;
+}
+.menu-top__list {
+    @include tablets {
+        display: none;
+    }
+}
+.menu-top__item::before {
+    content: "";
+    background-color: #fff;
+    display: inline-block;
+    width: rem(5px);
+    height: rem(5px);
+    border: rem(1px) solid #dddddd;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.menu-top__item:first-child:before {
+    display: none;
+}
+ul.menu-top__list {
+    list-style-type: circle;
+    color: white;
+}
+.header-menu {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: rem(25px);
+    
+}
+
+.header-button__link {
+    color: #fff;
+    border-radius: rem(3px);
+    border: rem(1px) solid #e45028;
+    background-color: #e45028;
+    font-size: rem(13px);
+    font-family: Ubuntu-Medium;
+    padding: rem(10px) rem(15px);
+    text-transform: uppercase;
+    display: inline-block;
+
+    @include phones {
+        font-size: rem(15px);
+        margin-top: rem(14px);
+        margin-right: rem(30px);
+    }
+}
+
+.header-hamburger {
+    padding-left: 10px;
+}
+.hamburger-menu__link__bars  {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    display: none;
+
+    @include tablets {
+        display: block;
+    }
+}
+
+
+/* sidebar */
+.side-first-page {
+    display: block;
+    top: 15%;
+    right: 5%;
+    position: fixed;
+    z-index: 200;
+}
+.side__item {
+    padding-bottom: rem(15px);
+}
+.side__item__img {
+    position: relative;
+    display: block;
+    width: rem(7px);
+    height: rem(7px);
+    border-radius: 50%;
+    background-color: #ddd;
+}
+.side__item--active:before {
+    border: rem(1px) solid #dddddd;
+    content: '';
+    position: absolute;
+    transform: translate(-30%, -30%);
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+}
+.side__item:hover:before {
+     content: '';
+    position: absolute;
+    transform: translate(-30%, -30%);
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    border: rem(1px) solid #e45028;
+}
+.side__item {
+    display: block;
+    
+}
+/* First page Main Content*/
+
+.main-content__first {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 15%;
+    flex: 1;
+    padding-top: 5%;
+    overflow: hidden;
+
+    @include tablets {
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 0;
+    }
+}
+.img-first {
+    flex-basis: 50%;
+    flex: 1;
+    min-width: 10%;
+
+    @include tablets {
+        height: 50%;
+    }
+}
+.img-first__pic {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+    @include tablets {
+        object-fit: contain;
+    }
+}
+
+.first-general {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    flex-basis: 50%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 10%;
+    @include tablets {
+        height: 50%;
+    }
+}
+
+.page-title {
+    font-size: rem(72px);
+    font-family: Gagalin-Regular;
+    font-weight: 300;
+}
+.yellow__title {    
+    color: #f9b43b;
+    @include tablets {
+        font-size: rem(65px);
+    }
+
+}
+
+.page__subtitle {
+    color: #fff;
+    font-size: rem(65px);
+    font-family: Lifehack-Medium;
+    font-weight: 300;
+
+    @include tablets {
+        font-size: rem(50px);
+    }
+}
+
+.arrow-first {
+    position: absolute;
+    bottom: 1%;
+    transition: 0.5s;
+    
+}
+.arrow {
+    height: rem(35px);
+    width: rem(25px);
+    display: inline-block;
+    vertical-align: middle;
+    fill: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,123 @@
+
+
+    /* Second Page*/
+.second-page {
+    background: url('../img/2background.jpg') center center no-repeat;
+    background-size: cover;
+    
+}
+.secondpage__top {
+    margin-bottom: 10%;
+    display: block;
+
+    @include tablets {
+        margin-bottom: 8%;
+    }
+
+}
+.secondpage__blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+
+    @include tablets {
+        padding-bottom: rem(70px);
+    }
+
+    @include phones {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.secondpage__item {
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+    // width: rem(300px);
+    @include phones {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        
+    }
+
+}
+.secondpage-main__title {
+    @include phones {
+        font-size: 4.125rem;
+    }
+}
+
+.secondpage__main {
+    display: block;
+    width: 100%;
+    @include phones {
+        padding-bottom: 12%;
+    }
+  
+}
+.secondpage__img--meat {
+    height: rem(100px);
+    width: rem(90px);
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    fill: #e25028;
+
+    @include phones {
+        height: 7rem;
+        width: 7rem;
+    }
+}
+.secondpage__img--hand {
+    height: rem(100px);
+    width: rem(90px);
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    fill: #f8b43a;
+
+    @include phones {
+        height: 7rem;
+        width: 6rem;
+    }
+}
+.secondpage__img--nature {
+    height: rem(100px);
+    width: rem(90px);
+    display: inline-block;
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    fill: #8ac03e;
+
+    @include phones {
+        height: 7rem;
+        width: 6rem;
+    }
+}
+.secondpage__info {
+    @include phones {
+        margin-left: rem(25px);
+    
+    }
+}
+
+.secondpage__title {
+    font-family: Lifehack-Medium;
+    font-size: rem(24px);
+    padding-top: 10%;
+    line-height: 1;
+}
+.secondpage__text {
+    font-family: Ubuntu-Light;
+    font-size: rem(14px);
+    padding-top: 5%;
+}

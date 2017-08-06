@@ -1,0 +1,125 @@
+
+/*5th page*/
+ .fifth-page {
+    background: url('../img/burger4th.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.white-title {
+    color: white;
+    position: absolute;
+    content: "";
+    top: 10%;
+    left: 5%;
+
+    @include tablets {
+    top: 12%;
+    left: 2%; 
+    }
+}
+.fifthpage__blocks {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: 50%;
+}
+
+.fifthpage__item--meat {
+    background-image: url('../img/burger4th.jpg');
+    background-repeat:  no-repeat;
+    background-position: right;
+    background-size: cover;
+    position: relative;
+}
+
+.fifthpage__item--veg {
+    background: url('../img/veggie.jpg');
+    background-repeat:  no-repeat;
+    background-position: right;
+    background-size: cover;
+    position: relative;
+}
+
+.fifthpage__item--diet {
+    background: url('../img/diet.jpg');
+    background-repeat:  no-repeat;
+    background-position: right;
+    background-size: cover;
+}
+
+.fifthpage__item {
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+
+}
+.fifthpage__menu {
+    display: block;
+    height: 100%;
+    width: rem(80px);
+    position: relative;
+    background-color: rgba(0, 0, 0, .3);
+
+    @include tablets {
+        width: 4rem;
+    }
+    @include phones {
+        width: 2rem;
+    }
+}
+.menu__title {
+    /*width: 100%;*/
+    height: 100%;
+}
+.fifthpage__hidden {
+    background: rgba(0, 0, 0, .6);
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+.fifthpage__hidden__text {
+    padding: rem(60px) rem(30px) 0;
+    color: #fff;
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    font-size: rem(14px);
+}
+.active .fifthpage__hidden {
+    height: 100%;
+    width: 90%;
+    overflow: hidden;
+    /*padding-top: rem(15px);
+    padding-bottom: rem(40px);*/
+}
+
+.vertical-text {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: rem(-110px);
+    width: rem(300px);
+    color: #fff;
+    font-size: rem(40px);
+    font-family: Gagalin-Regular;
+    font-weight: 300;
+    transform: rotate(-90deg);    
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    z-index: 100;
+   
+   @include phones {
+       font-size: 1.5rem;
+       left: -7.875rem;
+   }
+}

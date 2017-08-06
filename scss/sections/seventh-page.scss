@@ -1,0 +1,228 @@
+
+ /*7th page - Forms*/
+ .seventh-page {
+    background: url('../img/form-background.jpg') center center no-repeat;
+    background-size: cover;
+    font-size: rem(18px);
+}
+.seventhpage__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.seventhpage__top {
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 10%;
+
+    @include phones {
+        text-align: center;
+    }
+}
+.form__container {
+    display: block;
+    height: auto;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    font-size: rem(14px);
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.form__row {
+  display: flex;
+  margin-bottom: rem(20px);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form__left {
+    width: 50%;
+    flex: 1;
+    overflow: hidden;
+    color: #fff;
+
+    @include tablets {
+        width: 65%;
+    }
+    @include phones {
+        width: 100%;
+    }
+}
+.form__right {
+    width: 50%;
+    flex: 1;
+    overflow: hidden;
+    margin-left: rem(20px);
+    color: #fff;
+
+    @include tablets {
+        margin-left: 0;
+        width: 65%;
+    }
+    @include phones {
+        width: 100%;
+    }
+}
+.form__input__text {
+  font-size: rem(16px);
+  padding: rem(14px);
+  background: #fff;
+  border-radius: rem(7px);
+  border: 0;
+  height: rem(35px);
+  width: 100%;
+}
+.first__row .form__cell {
+    width: 48%;
+}
+.second__row .form__cell {
+    width: 100%;
+}
+.third__row .form__cell {
+    width: 20%;
+    @include phones {
+        width: 30%;
+    }
+
+}
+.form__cell--nophone {
+    @include phones {
+        display: none;
+    }
+}
+.form__input__textarea {
+  font-size: rem(16px);
+  padding: rem(14px);
+  background: #fff;
+  border-radius: rem(7px);
+  border: 0;
+  width: 100%;
+  height: rem(110px);
+}
+
+.form__textarea-label {
+    width: 100%;
+}
+.form__elements--phone {
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.form__buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+.submit__button {
+    color: #fff;
+    border-radius: rem(3px);
+    border: rem(1px) solid #e45028;
+    background-color: #e45028;
+    font-size: rem(13px);
+    font-family: Ubuntu-Medium;
+    padding: rem(10px) rem(15px);
+    text-transform: uppercase;
+    display: inline-block;
+    cursor: pointer;
+}
+.clear__button {
+    margin-left: rem(20px);
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    font-size: rem(14px);
+    font-family: Ubuntu-Light;
+    padding: rem(10px) rem(15px);
+    text-transform: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.clear__button:hover {
+    color: #f9b43b;
+    text-decoration: underline;
+}
+
+/*radio*/
+.radio__container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: rem(20px);
+}
+
+.form__radio--element {
+    display: inline-block;
+    vertical-align: middle;
+    /*display: none;*/
+}
+.form__radio__text {
+    display: inline-block;
+    font-size: rem(14px);
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    vertical-align: middle;
+    color: #fff;
+}
+.form__radio {
+    margin-left: rem(20px);
+}
+.form__radio:first-child {
+    margin-left: 0;
+}
+
+
+.checkbox__container {
+    margin-bottom: rem(20px);
+}
+.form__checkbox__text {
+    display: inline-block;
+    font-size: rem(14px);
+    font-family: Ubuntu-Light;
+    font-weight: 300;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.form__radio--fake {
+    content: "";
+    display: none;
+    /*position: absolute;
+    border-radius: 50%;
+    background: red;
+    width: rem(8px);
+    height: rem(8px);
+    top: rem(5px);
+    left: rem(5px);*/
+}
+
+
+/*.form__radio--fake:after {
+    display: inline-block;
+    width: rem(20px);
+    height: rem(20px);
+    border: rem(1px) solid #dddddd;
+    border-radius: 50%;
+    position: relative;
+}*/
+
+
+
