@@ -622,7 +622,8 @@ ul.menu-top__list {
   color: #f9b43b; }
   @media screen and (max-width: 480px) {
     .fouthpage {
-      font-size: 4.125rem; } }
+      font-size: 4.125rem;
+      padding-top: 3.125rem; } }
 
 .fouthpage__block {
   padding-top: 10%; }
@@ -783,6 +784,10 @@ ul.menu-top__list {
   -ms-flex-pack: end;
   justify-content: flex-end;
   max-width: 50%; }
+  @media screen and (max-width: 768px) {
+    .fifthpage__blocks {
+      max-width: 100%;
+      left: 0; } }
 
 .fifthpage__item--meat {
   background-image: url("../img/burger4th.jpg");
@@ -857,10 +862,8 @@ ul.menu-top__list {
 
 .active .fifthpage__hidden {
   height: 100%;
-  width: 90%;
-  overflow: hidden;
-  /*padding-top: rem(15px);
-    padding-bottom: rem(40px);*/ }
+  width: 100%;
+  overflow: hidden; }
 
 .vertical-text {
   display: block;
