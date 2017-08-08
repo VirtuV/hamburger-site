@@ -122,8 +122,11 @@
     -webkit-transform: rotate(-90deg);
     z-index: 100;
    
+   @include tablets {
+       left: -7.575rem;
+   }
    @include phones {
        font-size: 1.5rem;
-       left: -7.875rem;
+       left: -8.375rem;
    }
 }

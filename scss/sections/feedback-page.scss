@@ -58,7 +58,12 @@
 .feedback__item:hover .feedback__content {
     transform: scale(1);
     transition: all 0.8s;
-    
+}
+.feedback__tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 
 }
 .feedback__title {

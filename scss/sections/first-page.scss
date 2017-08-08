@@ -58,7 +58,6 @@ ul.menu-top__list {
     justify-content: flex-end;
     align-items: flex-start;
     margin-top: rem(25px);
-    
 }
 
 .header-button__link {
@@ -72,6 +71,11 @@ ul.menu-top__list {
     text-transform: uppercase;
     display: inline-block;
 
+     &:hover {
+    border: rem(1px) solid #c1401e;
+    background-color: #c1401e;
+    }
+
     @include phones {
         font-size: rem(15px);
         margin-top: rem(14px);
@@ -81,6 +85,12 @@ ul.menu-top__list {
 
 .header-hamburger {
     padding-left: 10px;
+    @include tablets {
+        padding-top: rem(4px);
+    }
+    @include phones {
+        padding-top: rem(14px);
+    }
 }
 .hamburger-menu__link__bars  {
     width: 30px;
@@ -92,6 +102,7 @@ ul.menu-top__list {
     @include tablets {
         display: block;
     }
+    
 }
 
 
