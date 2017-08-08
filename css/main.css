@@ -1244,6 +1244,9 @@ ul.menu-top__list {
   text-transform: uppercase;
   display: inline-block;
   cursor: pointer; }
+  .submit__button:hover {
+    border: 0.0625rem solid #c1401e;
+    background-color: #c1401e; }
 
 .clear__button {
   margin-left: 1.25rem;

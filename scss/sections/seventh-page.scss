@@ -144,6 +144,10 @@
     text-transform: uppercase;
     display: inline-block;
     cursor: pointer;
+     &:hover {
+    border: rem(1px) solid #c1401e;
+    background-color: #c1401e;
+    }
 }
 .clear__button {
     margin-left: rem(20px);
