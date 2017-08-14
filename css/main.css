@@ -261,7 +261,7 @@ ul.menu-top__list {
   color: #fff;
   text-transform: uppercase;
   background-color: #2f3234;
-  opacity: 0.9;
+  opacity: 1;
   position: absolute;
   content: "";
   top: 0;
@@ -352,7 +352,8 @@ ul.menu-top__list {
   justify-content: center; }
 
 .menu-hidden__item {
-  padding: 1%; }
+  padding: 1%;
+  display: inline-block; }
 
 .menu-hidden__dot {
   width: 0.3125rem;
@@ -779,6 +780,10 @@ ul.menu-top__list {
   top: 0;
   left: 0;
   display: inline-block;
+  height: 5.625rem;
+  width: 5.625rem; }
+
+.third-page__compound--inner {
   position: relative; }
 
 .third-page__hidden {
@@ -824,9 +829,29 @@ ul.menu-top__list {
   left: 0; }
   @media screen and (max-width: 768px) {
     .third-page__icon--first {
-      right: 0;
       top: 0;
-      left: 100%; } }
+      left: 90%; } }
+
+.kkal {
+  fill: #fad39d; }
+
+.svg_wrap--kkal {
+  position: relative; }
+
+.compound__text--kkal {
+  font-size: 1.25rem;
+  font-family: Gagalin-Regular;
+  font-weight: 300;
+  text-align: center;
+  color: #fad39d;
+  content: "";
+  position: absolute;
+  top: 33%;
+  right: 8%; }
+  @media screen and (max-width: 768px) {
+    .compound__text--kkal {
+      top: 4%;
+      right: 5%; } }
 
 .burger__svg {
   fill: #fff;
@@ -840,10 +865,13 @@ ul.menu-top__list {
 
 .container__img {
   display: inline-block;
-  margin-top: 30%; }
+  position: relative;
+  padding-top: 15%;
+  padding-bottom: 10%; }
   @media screen and (max-width: 768px) {
     .container__img {
-      margin-top: 0; } }
+      padding-bottom: 5%;
+      margin-top: 5%; } }
 
 .compound__hidden__list {
   display: -webkit-box;
@@ -891,6 +919,21 @@ ul.menu-top__list {
   width: 2.5rem;
   padding-right: 5%; }
 
+.arrow-left {
+  height: 70%;
+  width: 9.375rem;
+  position: relative; }
+
+.arrow-left__link {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-block;
+  height: 2.5rem;
+  width: 1.875rem;
+  margin-right: 1.25rem; }
+
 .arrow__left {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -901,6 +944,21 @@ ul.menu-top__list {
   vertical-align: middle;
   fill: #fff;
   cursor: pointer; }
+
+.arrow-right {
+  height: 70%;
+  width: 9.375rem;
+  position: relative; }
+
+.arrow-right__link {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  height: 2.5rem;
+  width: 1.875rem;
+  margin-left: 1.25rem; }
 
 .arrow__right {
   -webkit-transform: rotate(-90deg);
@@ -1006,6 +1064,9 @@ ul.menu-top__list {
   -webkit-align-items: baseline;
   -ms-flex-align: baseline;
   align-items: baseline; }
+  @media screen and (max-width: 768px) {
+    .third-page__bottom__info {
+      margin: 0 auto; } }
 
 .third-page__bottom {
   color: #e45028;

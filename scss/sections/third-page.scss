@@ -51,6 +51,10 @@
     top: 0;
     left: 0;
     display: inline-block;
+    height: rem(90px);
+    width: rem(90px);
+}
+.third-page__compound--inner {
     position: relative;
 }
 .third-page__hidden {
@@ -98,9 +102,29 @@
     bottom: 0;
     left: 0;
     @include tablets {
-        right: 0;
         top: 0;
-        left: 100%;
+        left: 90%;
+    }
+}
+.kkal {
+    fill: #fad39d;
+}
+.svg_wrap--kkal {
+    position: relative;
+}
+.compound__text--kkal {
+    font-size: rem(20px);
+    font-family: Gagalin-Regular;
+    font-weight: 300;
+    text-align: center;
+    color: #fad39d;
+    content: "";
+    position: absolute;
+    top: 33%;
+    right: 8%;
+    @include tablets {
+        top: 4%;
+        right: 5%;
     }
 }
 
@@ -116,9 +140,12 @@
 }
 .container__img {
     display: inline-block;
-    margin-top: 30%;
+    position: relative;
+    padding-top: 15%;
+    padding-bottom: 10%;
     @include tablets {
-        margin-top: 0;
+        padding-bottom: 5%;
+        margin-top: 5%;
     }
 }
 .compound__hidden__list {
@@ -142,14 +169,44 @@
     width: rem(40px);
     padding-right: 5%;
 }
+.arrow-left {
+    height: 70%;
+    width: rem(150px);
+    position: relative;
+}
+.arrow-left__link {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: inline-block;
+    height: rem(40px);  
+    width: rem(30px);
+    margin-right: rem(20px);
+}
 .arrow__left {
     transform: rotate(90deg);
-    height: rem(35px);
+    height: rem(35px);  
     width: rem(25px);
     display: inline-block;
     vertical-align: middle;
     fill: #fff;
     cursor: pointer;
+}
+.arrow-right {
+    height: 70%;
+    width: rem(150px);
+    position: relative;
+}
+.arrow-right__link {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    height: rem(40px);  
+    width: rem(30px);
+    margin-left: rem(20px);
 }
 .arrow__right {
     transform: rotate(-90deg);
@@ -159,6 +216,7 @@
     vertical-align: middle;
     fill: #fff;
     cursor: pointer;
+
 }
 .third-page__main {
     display: flex;
@@ -204,6 +262,9 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
+    @include tablets {
+        margin: 0 auto;
+    }
 }
 .third-page__bottom {
     color: #e45028;

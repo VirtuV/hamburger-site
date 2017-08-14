@@ -91,6 +91,7 @@ ul.menu-top__list {
 .header-hamburger {
     padding-left: 10px;
     cursor: pointer;
+    
     @include tablets {
         padding-top: rem(4px);
     }
@@ -115,7 +116,7 @@ ul.menu-top__list {
     color: #fff;
     text-transform: uppercase;
     background-color: #2f3234;
-    opacity: 0.9;
+    opacity: 1;
     position: absolute;
     content: "";
     top: 0;
@@ -192,6 +193,7 @@ ul.menu-top__list {
 }
 .menu-hidden__item {
     padding: 1%;
+    display: inline-block;
 }
 .menu-hidden__dot {
     width: rem(5px);
