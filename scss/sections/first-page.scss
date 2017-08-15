@@ -16,6 +16,11 @@
 }
 .logo {
     margin-top: 20%;
+  
+}
+.header-logo {
+    z-index: 200;
+    display: block;
 }
 .menu-top__item {
     color: #fff;
@@ -85,12 +90,17 @@ ul.menu-top__list {
 
 .header-hamburger {
     padding-left: 10px;
+    cursor: pointer;
+    
     @include tablets {
         padding-top: rem(4px);
     }
     @include phones {
         padding-top: rem(14px);
     }
+}
+.disappear {
+    display: none;
 }
 .hamburger-menu__link__bars  {
     width: 30px;
@@ -102,9 +112,97 @@ ul.menu-top__list {
     @include tablets {
         display: block;
     }
-    
 }
 
+.hidden__menu {
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #2f3234;
+    opacity: 1;
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    display: none;
+    z-index: 101;
+}
+.appear {
+    display: block;
+    transform: scale(1);
+    transition: all .6s;
+}
+.menu-hidden__content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+.menu-hidden__close {
+    position: relative;
+    height: 10%;
+    width: 100%;
+    text-align: right;
+    display: block;
+}
+.close__icon {
+    content: "";
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    opacity: 0.3;
+    width:40px;
+    height:40px;
+    // background-color: #fff;
+    border-radius:6px;
+    display: inline-block;
+}
+.close__icon:hover {
+    opacity: 1;
+}
+.close__icon:before, .close__icon:after {
+    position: absolute;
+    content: '';
+    width: 36px;
+    height: 4px;
+    top: 20%;
+    left: 5%;
+    background-color: #fff;
+    border-radius: 2px;
+    top: 16px;
+}
+
+
+.close__icon:before {
+    transform: rotate(45deg);
+}
+.close__icon:after {
+    transform: rotate(-45deg);
+}
+.menu-hidden__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+
+}
+.menu-hidden__item {
+    padding: 1%;
+    display: inline-block;
+}
+.menu-hidden__dot {
+    width: rem(5px);
+    height: rem(5px);
+    border: rem(1px) solid #dddddd;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: #fff;
+}
 
 /* sidebar */
 .side-first-page {
@@ -113,6 +211,9 @@ ul.menu-top__list {
     right: 5%;
     position: fixed;
     z-index: 200;
+    @include tablets {
+        display: none;
+    }
 }
 .side__item {
     padding-bottom: rem(15px);
