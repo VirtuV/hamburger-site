@@ -246,6 +246,9 @@ ul.menu-top__list {
     .header-hamburger {
       padding-top: 0.875rem; } }
 
+.disappear {
+  display: none; }
+
 .hamburger-menu__link__bars {
   width: 30px;
   height: 3px;
@@ -270,6 +273,15 @@ ul.menu-top__list {
   height: 100%;
   display: none;
   z-index: 101; }
+
+.appear {
+  display: block;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s; }
 
 .menu-hidden__content {
   text-align: center;

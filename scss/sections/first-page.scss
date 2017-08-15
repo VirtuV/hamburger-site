@@ -99,6 +99,9 @@ ul.menu-top__list {
         padding-top: rem(14px);
     }
 }
+.disappear {
+    display: none;
+}
 .hamburger-menu__link__bars  {
     width: 30px;
     height: 3px;
@@ -125,14 +128,11 @@ ul.menu-top__list {
     height: 100%;
     display: none;
     z-index: 101;
-    // text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
-
-    @include tablets {
-        // display: block;
-    }
+}
+.appear {
+    display: block;
+    transform: scale(1);
+    transition: all .6s;
 }
 .menu-hidden__content {
     text-align: center;
