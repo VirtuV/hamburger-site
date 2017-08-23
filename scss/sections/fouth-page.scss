@@ -60,8 +60,9 @@
     display: inline-block;
 
 }
-.fouthpage__hidden__description {
+.fouthpage__hidden-description {
     padding-left: rem(20px);
+
 }
 .fouthpage__item {
     font-family: Gagalin-Regular;
@@ -88,27 +89,32 @@
     transition: .4s;
 }
 
-.fouthpage__hidden {
+.hidden__block-team {
     display: flex;
-    height: 0;
     overflow: hidden;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    // height: rem(225px);
+    height: 12rem;
+    padding-bottom: rem(40px);
+    padding-top: rem(15px);
+
 
     @include tablets {
         flex-direction: column;
+        padding-top: 0;
+        height: 16rem;
     }
+}
+.fouthpage__hidden {
+    height: 0;
+    overflow: hidden;
+    transition: .6s;
 }
 .show .fouthpage__hidden {
     height: auto;
     overflow: hidden;
-    padding-top: rem(15px);
-    padding-bottom: rem(40px);
-
-    @include tablets {
-        padding-top: 0;
-    }
 }
 
 .fouthpage__hidden__img {
@@ -124,7 +130,7 @@
     height: 100%;
     width: 100%;
 }
-.fouthpage__hidden__title {
+.fouthpage__hidden-title {
     font-family: Ubuntu-Bold;
     font-weight: 700;
     font-size: rem(14px);
@@ -136,7 +142,7 @@
 
     
 }
-.fouthpage__hidden__text {
+.fouthpage__hidden-text {
     font-family: Ubuntu-Light;
     font-weight: 300;
     font-size: rem(14px);

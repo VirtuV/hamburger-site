@@ -23,6 +23,9 @@
     padding: 0;
     position: relative;
 }
+.onepage-wrapper, .onepage-wrapper .section {
+    overflow: visible !important;
+}
 .container {
     width: 95%;
     max-width: rem(940px);
