@@ -138,8 +138,20 @@ ul li {
   font-style: normal; }
 
 .first-page {
-  background: url("../img/1background.jpg") center center no-repeat;
-  background-size: cover; }
+  background: rgba(0, 0, 0, 0.7) url("../../img/1background.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  overflow: hidden; }
+
+.video {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 0; }
 
 .header {
   width: 100%;
@@ -603,7 +615,8 @@ li.active:before {
 /* Second Page*/
 .second-page {
   background: url("../img/2background.jpg") center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 1; }
 
 .secondpage__top {
   margin-bottom: 10%;

@@ -10,7 +10,7 @@ $(document).ready(function() {
 		showActiveTooltip: false,
 		slidesNavigation: false,
 		slidesNavPosition: 'bottom',
-		scrollingSpeed: 1000,
+		scrollingSpeed: 700,
     });
     
     

@@ -15,14 +15,14 @@
         var icons = {
             place: {
                 icon: {
-                    url: ('../img/ballon.png'),
+                    url: ('img/ballon.png'),
                     size: new google.maps.Size(40, 50),
                     scaledSize: new google.maps.Size(40, 50),
                 }
             },
             logo: {
                 icon: {
-                    url: '../img/burger-first.png',
+                    url: ('img/burger-first.png'),
                     size: new google.maps.Size(30, 30),
                     scaledSize: new google.maps.Size(30, 30),
                 }
