@@ -415,7 +415,7 @@ ul.menu-top__list {
   height: 1rem;
   border-radius: 50%; }
 
-.active:before {
+li.active:before {
   border: 0.0625rem solid #dddddd;
   content: '';
   position: absolute;
@@ -846,7 +846,8 @@ ul.menu-top__list {
   position: absolute;
   top: 0;
   right: -18.75rem;
-  color: #454849; }
+  color: #454849;
+  z-index: 100; }
 
 .third-page__compound:hover .third-page__hidden {
   display: block; }
