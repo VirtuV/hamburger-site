@@ -78,6 +78,7 @@
     top: 0;
     right: rem(-300px);
     color: #454849;
+    z-index: 100;
 }
 .third-page__compound:hover .third-page__hidden{
     display: block;

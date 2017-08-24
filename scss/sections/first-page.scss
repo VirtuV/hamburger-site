@@ -240,7 +240,7 @@ ul.menu-top__list {
     height: rem(16px);
     border-radius: 50%;
 }
-.active:before {
+li.active:before {
     border: rem(1px) solid #dddddd;
     content: '';
     position: absolute;
