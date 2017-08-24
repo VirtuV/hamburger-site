@@ -95,6 +95,7 @@
     border: rem(1px) solid #2f3234;
     background-color: #2f3234;
     border-radius: rem(3px);
+    outline: none;
 
     &:hover {
     background-color: #1f2122;
@@ -124,4 +125,28 @@
     @include phones {
         display: inline-block;
     }
+}
+.feedback__wholetext {
+    display: none;
+    height: rem(255px);
+    width: rem(470px);
+    background-color: #fff;
+    border-radius: rem(5px);
+    text-align: left;
+    padding: rem(20px);
+    color: #2f3234;
+    font-family: Ubuntu-Light;
+    font-size: 14px;
+    font-weight: 300;
+
+    @include phones {
+        width: rem(300px);
+        height: auto;
+    }
+}
+.fancybox-close-small:after {
+    color: red;
+}
+.fancybox-close-small:focus:after {
+    outline: none;
 }

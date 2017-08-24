@@ -35,6 +35,9 @@
     padding-left: rem(15px);
     vertical-align: middle;
 }
+.menu-top__link:hover {
+    text-decoration: underline;
+}
 .menu-top__list {
     @include tablets {
         display: none;
@@ -91,7 +94,9 @@ ul.menu-top__list {
 .header-hamburger {
     padding-left: 10px;
     cursor: pointer;
-    
+    &:hover {
+        border: 1
+    }
     @include tablets {
         padding-top: rem(4px);
     }
@@ -102,7 +107,7 @@ ul.menu-top__list {
 .disappear {
     display: none;
 }
-.hamburger-menu__link__bars  {
+.hamburger-menu__bars  {
     width: 30px;
     height: 3px;
     background-color: #fff;
@@ -230,7 +235,16 @@ ul.menu-top__list {
     border: rem(1px) solid #dddddd;
     content: '';
     position: absolute;
-    transform: translate(-30%, -30%);
+    transform: translate(-26%, -27%);
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+}
+.active:before {
+    border: rem(1px) solid #dddddd;
+    content: '';
+    position: absolute;
+    transform: translate(-26%, -27%);
     width: rem(16px);
     height: rem(16px);
     border-radius: 50%;
@@ -238,15 +252,39 @@ ul.menu-top__list {
 .side__item:hover:before {
      content: '';
     position: absolute;
-    transform: translate(-30%, -30%);
+    transform: translate(-28%, -27%);
     width: rem(16px);
     height: rem(16px);
     border-radius: 50%;
     border: rem(1px) solid #e45028;
 }
 .side__item {
-    display: block;
-    
+    display: block; 
+}
+//rewrite plagin
+.onepage-pagination{
+    top: 15%;
+    right: 5%;
+}
+
+.onepage-pagination li a {
+    height: rem(7px);
+    width: rem(7px);
+    padding: rem(11px);
+}
+.onepage-pagination li a:before {
+    background: #ddd;
+    width: rem(7px);
+    height: rem(7px);
+    border-radius: 50%;
+}
+
+.onepage-pagination li a.active:before {
+    width: rem(16px);
+    height: rem(16px);
+    border: 1px solid #ddd;
+    background: none;
+    left: 0.42rem;
 }
 /* First page Main Content*/
 
