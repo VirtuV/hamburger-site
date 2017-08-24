@@ -240,6 +240,15 @@ ul.menu-top__list {
     height: rem(16px);
     border-radius: 50%;
 }
+.active:before {
+    border: rem(1px) solid #dddddd;
+    content: '';
+    position: absolute;
+    transform: translate(-26%, -27%);
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+}
 .side__item:hover:before {
      content: '';
     position: absolute;

@@ -2,11 +2,11 @@ $('.clear__button').on('click',function(){
         $('#order-form')[0].reset();
   });
 
-var submitForm = function (ev) {
-    ev.preventDefault();
-    console.log('in form');
+var submitForm = function (e) {
+    e.preventDefault();
+    console.log(e);
 
-    var form = $(ev.target),
+    var form = $(e.target),
     url = form.attr('action'),
     data = form.serialize();
 
@@ -28,17 +28,15 @@ request.fail(function(jqXHR, textStatus) {
 };
 
 
-// $('#order-form').validetta({
+$('#order-form').validetta({
 
-//      display : 'inline',
-//      bubblePosition: 'top',
-//      bubbleGapLeft: 20, 
-//      bubbleGapBottom: 40,
-//      onValid : function(){
-//          $('#order-form').trigger(submitForm);
-//      },
-// });
+     display : 'inline',
+     bubblePosition: 'top',
+     bubbleGapLeft: 20, 
+     bubbleGapBottom: 40,
+     onValid : submitForm,
+});
 
 // if onValid(true) {
-$('#order-form').on('submit', submitForm);
+// $('#order-form').on('submit', (e)=>{e.preventDefault();});
 // };
